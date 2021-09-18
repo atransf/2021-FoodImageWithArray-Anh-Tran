@@ -1,24 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_021_9_17_FoodImageWithCondition" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="zCz-IQ-6UB">
+                                <rect key="frame" x="30" y="124" width="354" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="4GZ-oc-CAn"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🍕Pizza: $19.99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcq-kF-aJN">
+                                <rect key="frame" x="30" y="384" width="354" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="W23-L2-0tU"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="g3S-nk-YvL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Swa-cT-FbP">
+                                <rect key="frame" x="30" y="484" width="354" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4pA-Tu-52j"/>
+                                </constraints>
+                                <state key="normal" title="Show Next Dish"/>
+                                <connections>
+                                    <action selector="nextDishButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QxF-ox-WkV"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zCz-IQ-6UB" secondAttribute="trailing" constant="30" id="0Ha-6F-acL"/>
+                            <constraint firstItem="jcq-kF-aJN" firstAttribute="top" secondItem="zCz-IQ-6UB" secondAttribute="bottom" constant="60" id="2Ih-jC-m4h"/>
+                            <constraint firstItem="Swa-cT-FbP" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jcq-kF-aJN" secondAttribute="trailing" id="7uS-nk-rA4"/>
+                            <constraint firstItem="jcq-kF-aJN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BMH-9n-Cw4"/>
+                            <constraint firstItem="zCz-IQ-6UB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BXc-of-Avy"/>
+                            <constraint firstItem="zCz-IQ-6UB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="INc-gx-OYv"/>
+                            <constraint firstItem="Swa-cT-FbP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jcq-kF-aJN" secondAttribute="leading" id="L17-8s-XRQ"/>
+                            <constraint firstItem="Swa-cT-FbP" firstAttribute="top" secondItem="jcq-kF-aJN" secondAttribute="bottom" constant="60" id="Nix-pq-wGW"/>
+                            <constraint firstItem="jcq-kF-aJN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zCz-IQ-6UB" secondAttribute="leading" id="R7G-vu-dmd"/>
+                            <constraint firstItem="zCz-IQ-6UB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Tp1-PS-kny"/>
+                            <constraint firstItem="zCz-IQ-6UB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="agq-gx-FUH"/>
+                            <constraint firstItem="Swa-cT-FbP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gLA-aD-kKl"/>
+                            <constraint firstItem="jcq-kF-aJN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uGB-uH-vol"/>
+                            <constraint firstItem="jcq-kF-aJN" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zCz-IQ-6UB" secondAttribute="trailing" id="wgE-wL-IOs"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="foodImageView" destination="zCz-IQ-6UB" id="ff8-p6-Usf"/>
+                        <outlet property="foodPriceLable" destination="jcq-kF-aJN" id="rdR-rG-lSP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pizza" width="2000" height="1334"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
